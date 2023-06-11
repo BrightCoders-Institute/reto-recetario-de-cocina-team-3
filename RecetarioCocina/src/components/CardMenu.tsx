@@ -1,16 +1,27 @@
 import React from 'react';
 import { View, Image, StyleSheet, Text } from 'react-native';
-//import img from '../assets/images/pizza_casera.jpg';
 
 interface cardMenuInterface {
 	urlImg: any,
-	description: string
+	description: string,
+	dimensions?: Dimensions
+}
+interface Dimensions {
+	hgt: number,
+	wdt: number
 }
 
-export const CardMenu = ({urlImg, description}: cardMenuInterface) => {
+export const CardMenu = ({urlImg, description, dimensions}: cardMenuInterface) => {
 	return (
 		<View style={styles.container}>
-			<Image source={urlImg} style={styles.img}/>
+			<Image 
+				source={urlImg} 
+				style={
+					dimensions ? 
+					{...styles.img, height:dimensions.hgt, width: dimensions.wdt} 
+					: styles.img 
+				}
+			/>
 			<Text style={styles.text}>{description}</Text>
 		</View>
 	);
@@ -23,7 +34,7 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 	},
 	container: {
-		marginHorizontal: 10,
+		marginHorizontal: 7,
 	},
 	text:{
 		fontSize: 15,
