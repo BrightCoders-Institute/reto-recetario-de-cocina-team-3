@@ -31,6 +31,7 @@ export const Home = () => {
 					})
 				}
 			</View>
+			
 		</View>
 	);
 };

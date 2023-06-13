@@ -1,10 +1,11 @@
-import React from 'react'
-import { View, Text } from 'react-native';
+import React from 'react';
+import { View} from 'react-native';
+import {ImgFOOD} from '../components/ImgFood';
 
 export const Details = () => {
 	return (
 		<View>
-			<Text> Details </Text>
+			<ImgFOOD />
 		</View>
 	)
 }

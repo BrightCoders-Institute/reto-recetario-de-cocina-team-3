@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
-import Icon from 'react-native-ionicons';
+
 
 export const SearchBar = () => {
     const [text, onChangeText] = useState('');
@@ -12,8 +12,8 @@ export const SearchBar = () => {
         value={text}
         placeholder="What do you want to eat?"
       />
-      <Icon name="mic-outline" style={styles.icon}/>
-      <Icon name="search" style={styles.icon}/>
+      {/* <Icon name="mic-outline" style={styles.icon}/>
+      <Icon name="search" style={styles.icon}/> */}
     </View>
   )
 }
