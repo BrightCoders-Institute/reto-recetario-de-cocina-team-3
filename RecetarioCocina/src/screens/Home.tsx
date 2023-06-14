@@ -4,6 +4,7 @@ import { Title } from '../components/Title';
 import { CardMenu } from '../components/CardMenu';
 import data from '../assets/data/data';
 import { SearchBar } from '../components/SearchBar';
+// import { Details } from './Details';
 
 export const Home = () => {
 	const { trendingMenu,recentMenu, categories } = data;
@@ -31,6 +32,7 @@ export const Home = () => {
 					})
 				}
 			</View>
+			{/* <Details /> */}
 		</View>
 	);
 };

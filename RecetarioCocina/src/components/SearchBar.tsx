@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, TextInput } from 'react-native';
-import Icon from 'react-native-ionicons';
+import { StyleSheet, View, TextInput, Image } from 'react-native';
+import search from '../assets/icons/search.png';
+import micro from '../assets/icons/micro.png';
 
 export const SearchBar = () => {
     const [text, onChangeText] = useState('');
   return (
     <View>
-        <TextInput 
+        <Image style = {styles.icon1}
+        source={search}/>
+        <TextInput
         style={styles.input}
         onChangeText={onChangeText}
         value={text}
         placeholder="What do you want to eat?"
       />
-      <Icon name="mic-outline" style={styles.icon}/>
-      <Icon name="search" style={styles.icon}/>
+        <Image style = {styles.icon2}
+        source={micro}/>
     </View>
   )
 }
@@ -22,12 +25,28 @@ const styles = StyleSheet.create({
     input: {
       height: 40,
       margin: 12,
-      borderWidth: 1,
+      backgroundColor: 'dimgray',
       padding: 10,
       borderRadius: 10,
+      textAlign: 'center',
     },
-    icon: {
-        fontSize:8,
-        color:"red",
-    }
+    icon1: {
+        width: 20,
+        height: 25,
+        tintColor:"white",
+        position: 'absolute',
+        top: 20,
+        zIndex: 1,
+        left: 25,
+    },
+    icon2: {
+      width: 25,
+      height: 25,
+      tintColor:"white",
+      position: 'absolute',
+      top: 20,
+      zIndex: 1,
+      left: 315,
+      marginRight: 1,
+  },
   });
