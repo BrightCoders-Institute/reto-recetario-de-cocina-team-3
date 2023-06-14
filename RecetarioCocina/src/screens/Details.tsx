@@ -1,11 +1,12 @@
 import React from 'react';
-import { View} from 'react-native';
-import {ImgFOOD} from '../components/ImgFood';
+import { View, Text} from 'react-native';
+// import {ImgFOOD} from '../components/ImgFood';
 
-export const Details = () => {
+export const Details = ({route}) => {
+	const data =  route.params.data;
 	return (
 		<View>
-			<ImgFOOD />
+			<Text style={{color: 'black'}}>{data.Description}</Text>
 		</View>
 	)
 }
