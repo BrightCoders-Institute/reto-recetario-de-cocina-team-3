@@ -1,5 +1,6 @@
-import React from 'react'
-import { View, TouchableOpacity } from 'react-native';
+
+import React from 'react';
+import { ScrollView, TouchableOpacity } from 'react-native';
 import { MenuData } from '../interfaces/menuData';
 import { Card } from './Card';
 import { useNavigation } from '@react-navigation/native';
@@ -8,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 export const Menu = ({menuData} : MenuData) => {
 	const navigation = useNavigation();
 	return (
-		<View style={{flexDirection:"row"}}>
+		<ScrollView horizontal={true}>
 			{
 				menuData.map((item) => (
 					<TouchableOpacity
@@ -24,6 +25,6 @@ export const Menu = ({menuData} : MenuData) => {
       				</TouchableOpacity>
 				))
 			}
-		</View>
-	)
-}
+		</ScrollView>
+	);
+};
