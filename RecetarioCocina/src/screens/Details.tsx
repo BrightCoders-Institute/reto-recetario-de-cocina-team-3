@@ -1,6 +1,7 @@
 import React from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { Text, View} from 'react-native';
 import {ImgFOOD} from '../components/ImgFood';
+import { FlatList } from 'react-native-gesture-handler';
 import { Ingredients } from '../components/Ingredients';
 
 const INGREDIENTS_LIST = [
@@ -17,7 +18,12 @@ const INGREDIENTS_LIST = [
 export const Details = () => {
 	return(
 		<View>
-			<ImgFOOD />
+			<ImgFOOD
+				category={data.category}
+				title={data.Description}
+				img={data.img}
+			>
+			</ImgFOOD>
 			<FlatList
 			data={INGREDIENTS_LIST}
 			renderItem={({item}) => <Ingredients ingredients={item} />}

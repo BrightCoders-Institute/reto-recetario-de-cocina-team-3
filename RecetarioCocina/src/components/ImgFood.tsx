@@ -1,37 +1,41 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { StyleSheet, View, Image, Text, ImageBackground, TouchableOpacity } from 'react-native';
 
 
-export const ImgFOOD = () => {
-  const [count, setCount] = useState(0);
-  const onPress = () => setCount(prevCount => prevCount + 1);
+interface propsInfo {
+	title: string,
+  category: string,
+  img: string
+}
+
+export const ImgFOOD = ({title,category,img}: propsInfo) => {
+  const image = {uri: img};
 	return (
     <View style={styles.flex}>
-      <ImageBackground 
-        source={require('../assets/images/pizza_casera.jpg')} 
+      <ImageBackground
+        source={image}
         style={{width: '100%', height: '80%'}}
         imageStyle={{ opacity: 0.3 }}
       >
         <View style={styles.container}>
           <View style={styles.container_icon}>
-          <TouchableOpacity onPress={onPress}>
+          <TouchableOpacity>
             <Image 
               source={require('../assets/images/icons/cancelar.png')}
               />
           </TouchableOpacity>
-          <Text>Count: {count}</Text>
             <View style={styles.container_icon}>
               <Image 
               source={require('../assets/images/icons/compartir.png')}
               />
-              <Image style={{marginLeft: 20}}
+              <Image style={ { marginLeft: 20 } }
                 source={require('../assets/images/icons/corazon.png')}
               />
             </View>
           </View>
           <View>
-            <Text style={styles.titlle}> TRENDING </Text>
-            <Text style={styles.sub_titlle}> Peperonin pizza pocket </Text>
+            <Text style={styles.titlle}> {category} </Text>
+            <Text style={styles.sub_titlle}> {title} </Text>
           </View>
         </View>
       </ImageBackground>
