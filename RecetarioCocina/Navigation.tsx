@@ -1,21 +1,18 @@
 import React from 'react';
-// import { Home } from './src/screens/Home';
-// import Navigation from '../RecetarioCocina/Navigation';
-import {Home} from './src/screens/Home';
-import {Details} from './src/screens/Details';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator  } from '@react-navigation/stack';
-import { StyleSheet} from 'react-native';
+import {Details} from '../RecetarioCocina/src/screens/Details';
+import {Home} from '../RecetarioCocina/src/screens/Home';
 
 const Stack = createStackNavigator();
 
-export const App = () => {
+export default function MyStack() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+        <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
+        </Stack.Navigator>
     </NavigationContainer>
   );
-};
+}

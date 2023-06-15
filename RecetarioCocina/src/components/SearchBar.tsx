@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, TextInput, Image } from 'react-native';
-import {search} from '../assets/images/icons/search.png';
-import {micro} from '../assets/images/icons/micro.png';
 
 export const SearchBar = () => {
     const [text, onChangeText] = useState('');
   return (
     <View>
-        <Image style = {styles.icon1}
-        source={search}/>
+        <Image 
+        source={require('../assets/images/icons/search.png')}
+        style = {styles.icon1}/>
         <TextInput
         style={styles.input}
         onChangeText={onChangeText}
         value={text}
         placeholder="What do you want to eat?"
       />
-        <Image style = {styles.icon2}
-        source={micro}/>
+        <Image 
+        source={require('../assets/images/icons/micro.png')}
+        style = {styles.icon2}/>
     </View>
   )
 }
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     icon1: {
         width: 20,
         height: 25,
-        tintColor:"white",
+        tintColor:'white',
         position: 'absolute',
         top: 20,
         zIndex: 1,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     icon2: {
       width: 25,
       height: 25,
-      tintColor:"white",
+      tintColor:'white',
       position: 'absolute',
       top: 20,
       zIndex: 1,

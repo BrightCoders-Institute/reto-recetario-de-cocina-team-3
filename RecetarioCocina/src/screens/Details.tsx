@@ -17,6 +17,7 @@ const INGREDIENTS_LIST = [
 export const Details = () => {
 	return(
 		<View>
+			<ImgFOOD />
 			<FlatList
 			data={INGREDIENTS_LIST}
 			renderItem={({item}) => <Ingredients ingredients={item} />}
@@ -27,7 +28,6 @@ export const Details = () => {
 				</View>
 			}
 			/>
-			<ImgFOOD />
 		</View>
 	)
 }
