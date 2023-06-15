@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { FlatList, Text, View } from 'react-native';
+import {ImgFOOD} from '../components/ImgFood';
 import { Ingredients } from '../components/Ingredients';
 
 const INGREDIENTS_LIST = [
@@ -26,7 +27,8 @@ export const Details = () => {
 				</View>
 			}
 			/>
-			</View>
+			<ImgFOOD />
+		</View>
 	)
 }
 

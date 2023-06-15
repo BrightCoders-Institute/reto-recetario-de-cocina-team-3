@@ -1,0 +1,35 @@
+
+
+{
+	"trendingMenu": [
+		{"img": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80",
+		"Description":"Peperonin pizza pocket",
+		"index": 1
+		},
+		{"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoCzd0BxdIx_d791tV8agAn-HxyC6sJcvq5EG_ex2geA&s",
+		"Description":"Choocolate chip",
+		"index": 2
+		},
+		{"img": "https://sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg",
+			"Description":"Pancake cup",
+			"index": 3
+		}
+	],
+	"recentMenu":[
+		{"img": "https://downshiftology.com/wp-content/uploads/2023/02/Meatballs-main-500x500.jpg",
+			"Description":"Meatball sub make",
+			"index":1,
+			"imgDimensions": {
+				"hgt": 250,
+				"wdt": 170
+			}
+		}
+	],
+	"categories": [{
+		"category": "TRENDING"
+	}, 
+	{
+		"category": "RECENT"
+	}
+	]
+}

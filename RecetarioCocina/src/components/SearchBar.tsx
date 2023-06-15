@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, TextInput, Image } from 'react-native';
-import search from '../assets/icons/search.png';
-import micro from '../assets/icons/micro.png';
+import {search} from '../assets/images/icons/search.png';
+import {micro} from '../assets/images/icons/micro.png';
 
 export const SearchBar = () => {
     const [text, onChangeText] = useState('');
