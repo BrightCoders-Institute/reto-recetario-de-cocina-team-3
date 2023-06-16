@@ -13,7 +13,7 @@ export const Menu = ({menuData} : MenuData) => {
 			{
 				menuData.map((item) => (
 					<TouchableOpacity
-						onPress={()=> navigation.navigate("Details", {data: item})}
+						onPress={()=> navigation.navigate("Ingredients", {data: item})}
 						key={item.index}
 					>
 						<Card 
