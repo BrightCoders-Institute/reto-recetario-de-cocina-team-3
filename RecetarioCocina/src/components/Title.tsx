@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 interface propsTitle {
@@ -17,6 +17,6 @@ export const Title = ({title}: propsTitle) => {
 const styles = StyleSheet.create({
 	title: {
 		fontSize:35,
-		color:"red",
+		color:'#ee82ee',
 	},
 });

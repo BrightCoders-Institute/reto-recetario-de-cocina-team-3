@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, TextInput, Image } from 'react-native';
 
 export const SearchBar = () => {
-    const [text, onChangeText] = useState('');
+  const [text, onChangeText] = useState('');
   return (
     <View>
         <Image 
