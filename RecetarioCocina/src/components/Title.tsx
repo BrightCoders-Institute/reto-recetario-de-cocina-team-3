@@ -1,16 +1,14 @@
-import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React from 'react'
+import { StyleSheet, Text } from 'react-native';
 
 interface propsTitle {
 	title: string
 }
 export const Title = ({title}: propsTitle) => {
 	return (
-		<View>
-			<Text style={styles.title}>
-				{ title }
-			</Text>
-		</View>
+		<Text testID='title' style={styles.title}>
+			{ title }
+		</Text>
 	);
 };
 

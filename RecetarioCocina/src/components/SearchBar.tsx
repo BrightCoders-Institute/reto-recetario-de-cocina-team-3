@@ -18,8 +18,8 @@ export const SearchBar = () => {
         source={require('../assets/images/icons/micro.png')}
         style = {styles.icon2}/>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
     input: {
