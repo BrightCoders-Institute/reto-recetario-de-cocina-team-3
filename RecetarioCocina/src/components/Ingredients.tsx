@@ -1,35 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-interface propsIngredient {
-	dataItem: {}
-}
 
-export const Ingredients = ({dataItem}: propsIngredient) => {
-    console.log(dataItem);
-  return (
-    <View>
-        {/* <Text style={{fontSize: 16, fontWeight: 'bold', }}>{portion}</Text>
-        <View style={style.container}>
-            {
-                ingredient.map((item_ingredient) => <Text style={style.ingredient}>{item_ingredient}</Text>)
-            },
-            {
-                amount.map((item_amount) => (
-                    <Text style={style.amount}>{item_amount}</Text>
-                ))
-            }
-        </View> */}
-    </View>
-  )
-}
+type ItemProps = {
+	ingredient: string,
+	amount: string
+};
+
+export const Ingredients = ({ingredient,amount}: ItemProps) => (
+  <View style={style.container}>
+    <Text style={style.ingredient}>{ingredient}</Text>
+	<Text style={style.amount}>{amount}</Text>
+  </View>
+);
+
 
 const style = StyleSheet.create({
     container:{
         flexDirection: 'row',
         marginBottom: 10,
         padding: 15,
-        borderBottomWidth: .5,
+        borderBottomWidth: 0.5,
         borderBottomColor: '#4e5052',
     },
     ingredient:{
@@ -38,6 +29,6 @@ const style = StyleSheet.create({
     },
     amount:{
         fontSize: 16,
-        flex: 1,
+        flex: 2,
     },
 })

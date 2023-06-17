@@ -14,7 +14,7 @@ export const ImgFOOD = ({title,category,img}: propsInfo) => {
     <View style={styles.flex}>
       <ImageBackground
         source={image}
-        style={{width: '100%', height: '80%'}}
+        style={{width: '100%', height: 250}}
         imageStyle={{ opacity: 0.3 }}
       >
         <View style={styles.container}>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     padding: 30,
     justifyContent: 'space-between',
     // backgroundColor: 'red',
-    height: '80%',
+    height: '100%',
     // flexDirection: 'column',
     // flex: 6,
 
